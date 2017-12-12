@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DashBoard | Incidents</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/dc.min.css" />
+    <link rel="stylesheet" href="http://localhost:3000/stylesheets/markerCluster.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+        crossorigin="" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+
+    <script src=""></script>
+    <style>
+        .heat-box {
+            stroke: #E6E6E6;
+            stroke-width: 2px;
+        }
+    </style>
+    <script>
+    window.addEventListener('load', function() {
+  console.log('All assets are loaded')
+})
+    </script>
+</head>
+<div id="loader"></div>
+<body id="body">
+        
+   
+
+    <div class="row">
+
+        <div class=" col-md-8 col-xs-12">
+                <div id="map">
+                        
+                 </div>
+                
+        </div>
+        <div class=" col-md-4 col-xs-12">
+                
+
+                 <div id="policeDistrictChart">
+                        <div class="reset" style="visibility: hidden;">selected:
+                            <span class="filter"></span>
+                            <a href="javascript:policeDistrict.filterAll();dc.redrawAll();">reset</a>
+                        </div>
+                    </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class=" col-md-3 col-xs-12">
+                <div id="category-chart">
+                        <div class="reset" style="visibility: hidden;">selected:
+                            <span class="filter"></span>
+                            <a href="javascript:categoryChart.filterAll();dc.redrawAll();">reset</a>
+                        </div>
+                    </div>
+          
+        </div>
+        <div class=" col-md-3 col-xs-12">
+              
+
+                    <div id="resolution-chart">
+                            <div class="reset" style="visibility: hidden;">range:
+                                <span class="filter"></span>
+                                <a href="javascript:resolutionChart.filterAll();dc.redrawAll();">reset</a>
+                            </div>
+                        </div>
+             
+            </div>
+            <div class=" col-md-6 col-xs-12">
+                    <div id="dtime">
+                        <div class="reset" style="visibility: hidden;">range:
+                            <span class="filter"></span>
+                            <a href="javascript:chart.filterAll();dc.redrawAll();">reset</a>
+                        </div>
+                    </div>
+                </div>    
+        
+    </div>
+   
+    <select onchange="monthChange()" id="mySelect" title="please select a month">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        
+    </select>
+    
+
+
+
+
+    <script type="text/javascript" src="javascripts/d3.js"></script>
+    <script type="text/javascript" src="javascripts/crossfilter.js"></script>
+    <script type="text/javascript" src="javascripts/dc.min.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+        crossorigin=""></script>
+    </script>
+<script src="javascripts/leaflet.markercluster.js"></script>
+    <script src="javascripts/map.js"></script>
+
+<script src="javascripts/charts.js"></script>
+
+
+</body>
+
+</html>
