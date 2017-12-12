@@ -1,6 +1,6 @@
 
 var statesData
-fetch('http://localhost:3000/geojson').then(function (response) {
+fetch('/geojson').then(function (response) {
   return response.json()
 }).then(function (result) {
   statesData = result
