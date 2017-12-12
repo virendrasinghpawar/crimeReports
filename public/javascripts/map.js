@@ -145,7 +145,7 @@ fetch('/geojson').then(function (response) {
                         // var bounds = map.getCenter();
                         // console.log("Center", map.getCenter())
 
-        fetch('http://localhost:3000/incidentinside', {
+        fetch('/incidentinside', {
                         method: 'post',
                         headers: {
                             'Accept': 'application/json, text/plain, */*',
