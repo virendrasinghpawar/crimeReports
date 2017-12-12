@@ -4,7 +4,7 @@ fetch('/geojson').then(function (response) {
   return response.json()
 }).then(function (result) {
   statesData = result
-
+  console.log("statesdata",statesData)
   var map = L.map('map').setView([37.7749, -122.4194], 12)
 
   mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
