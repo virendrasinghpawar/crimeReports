@@ -21,7 +21,7 @@
                 console.log("i am goingto show")
                 
 
-            fetch('http://localhost:3000/chartsData',
+            fetch('/chartsData',
               {
                 method: 'post',
                 headers: {
