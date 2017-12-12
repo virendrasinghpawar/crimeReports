@@ -7,9 +7,9 @@ var IncidentController = require('../controller/incident')
 // var foo = require('')
 /* GET home page. */
 // var config = require('../public/javascripts/incidentsData.json')
-router.get('/', (req, res) => {
-  res.render('index', { title: 'Express' })
-})
+// router.get('/', (req, res) => {
+//   res.render('index', { title: 'Express' })
+// })
 router.post('/chartsData', IncidentController.chartsFilter)
 
 router.post('/incidentinside', IncidentController.incidentsInside)
