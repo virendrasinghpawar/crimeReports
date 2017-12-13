@@ -23,5 +23,6 @@ router.get('/', (req, res) => {
 router.get('/lorem', (req,res)=>{
 res.json({"hello":"world"});
 })
+router.get('/police',IncidentController.get_police_Department )
 
 module.exports = router
